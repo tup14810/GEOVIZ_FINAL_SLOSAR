@@ -1,0 +1,94 @@
+Battle,Date,Date1,Date2_1,Latitude,Longitude,Dead_or_Wounded_high,Outcome,Dead_low,Day1,Month1,Year1,Day2,Month2,Year2
+Battle of Cape Finisterre,,22/07/1805,22/07/1805,42.8941,-9.2711,845,British Victory,,22,7,1805,,,
+Battle of Memmingen,,14/10/1805,14/10/1805,47.987778,10.181111,16,Unknown,,14,10,1805,,,
+Battle of Elchingen,,14/10/1805,14/10/1805,48.4517,10.0978,6854,French Victory,,14,10,1805,,,
+Battle of Trafalgar,,21/10/1805,21/10/1805,36.293,-6.255,8602,British Victory,,21,10,1805,,,
+Battle of Ulm,,16/10/1805,19/10/1805,48.3833,9.9833,5500,French Victory,,16,10,1805,19,10,1805
+Battle of Schangrabern,,16/11/1805,16/11/1805,48.6142,16.0197,2400,French Victory,,16,11,1805,,,
+Battle of Durenstein,,11/11/1805,11/11/1805,48.387222,15.520278,10000,Coalition Victory,,11,11,1805,,,
+Battle of Austerlitz,,02/12/1805,02/12/1805,49.133333,16.766667,24279,French Victory,,2,12,1805,,,
+Battle of Campo Tenese,,09/03/1806,09/03/1806,39.85,16.133333,10,French Victory,,9,3,1806,,,
+Battle of Maida,,04/07/1806,04/07/1806,38.85,16.3667,1687,British Victory,,4,7,1806,,,
+Siege of Gaeta,,26/02/1806,18/07/1806,41.216667,13.566667,2000,French Victory,,26,2,1806,18,7,1806
+Calabrian Revolt (see Battle of Campo Tenese),,09/03/1806,09/03/1806,39.85,16.133333,1000,French Victory,,9,3,1806,,,
+Battle of Saalfeld,,10/10/1806,10/10/1806,50.65,11.3669,2000,French Victory,,10,10,1806,,,
+Battle of Jena,,14/10/1806,14/10/1806,50.927222,11.586111,33000,French Victory,,14,10,1806,,,
+Battle of Auerstedt,,14/10/1806,14/10/1806,51.099444,11.5875,22100,French Victory,,14,10,1806,,,
+Battle of Lübeck,,06/11/1806,06/11/1806,53.869722,10.686389,18310,French Victory,,6,11,1806,,,
+Siege of Stralsund,,24/07/1807,24/08/1807,54.309167,13.081944,998,French Victory,,24,7,1807,24,8,1807
+Siege of Danzig,,19/03/1807,24/05/1807,54.366667,18.633333,9000,French Victory,,19,3,1807,24,5,1807
+Battle of Czarnowo,,23/12/1806,23/12/1806,52.475278,20.773056,4840,French Victory,,23,12,1806,,,
+Battle of Heilsberg,,10/06/1807,10/06/1807,54.1167,20.5833,21457,Inconclusive,,10,6,1807,,,
+Battle of Pułtusk,,26/12/1806,26/12/1806,52.716667,21.1,12000,French victory,,26,12,1806,,,
+Battle of Eylau,,07/02/1807,08/02/1807,54.4,20.633333,55643,Inconclusive,,7,2,1807,8,2,1807
+Battle of Friedland,,14/06/1807,14/06/1807,54.45,21.016667,50000,French Victory,,14,6,1807,,,
+Tumult of Aranjuez,,17/03/1808,19/03/1808,40.033333,-3.602778,,Mutineer victory,,17,3,1808,19,3,1808
+Dos de Mayo Uprising,,02/05/1808,02/05/1808,40.416667,-3.7,850,French Victory,,2,5,1808,,,
+Battle of Medina del Rioseco,,14/07/1808,14/07/1808,41.8942,-4.9936,1500,French Victory,,14,7,1808,,,
+Battle of Bailen,,16/07/1808,19/07/1808,38.1,-3.8,4000,Spanish Victory,,16,7,1808,19,7,1808
+Battle of Vimeiro,,21/08/1808,21/08/1808,39.175,-9.316667,2910,Coalition Victory,,21,8,1808,,,
+Battle of Tudela,,23/11/1808,23/11/1808,42.054925,-1.616331,6700,French Victory,,23,11,1808,,,
+Battle of Somosierra,,30/11/1808,30/11/1808,41.15,-3.583333,2500,Franco-Polish Victory,,30,11,1808,,,
+Battle of Corunna,,16/01/1809,16/01/1809,43.362778,-8.404722,1600,French Victory,,16,1,1809,,,
+First siege of Zaragoza,,15/06/1808,14/08/1808,41.65,-0.883333,8500,Spanish Victory,,15,6,1808,14,8,1808
+Battle of Teugen-Hausen,,19/04/1809,19/04/1809,48.9,12.016667,9370,French Victory,,19,4,1809,,,
+Battle of Ratisbon,,23/04/1809,23/04/1809,49.016667,12.083333,10000,French Victory,,23,4,1809,,,
+Battle of Eckmuhl,,21/04/1809,22/04/1809,48.8438,12.1823,13700,French Victory,,21,4,1809,22,4,1809
+First Battle of Porto,,29/03/1809,29/03/1809,41.162142,-8.621953,10000,French Victory,,29,3,1809,,,
+Battle of Talavera,,27/07/1809,28/07/1809,39.966667,-4.833333,14857,Inconclusive,,27,7,1809,28,7,1809
+Battle of Wörgl,,13/05/1809,13/05/1809,47.483333,12.066667,3191,Baravian Victory,,13,5,1809,,,
+Battle of Aspern-Essling,,21/05/1809,22/05/1809,48.213056,16.5025,42880,Austrian Victory,,21,5,1809,22,5,1809
+Battle of Raab,,14/06/1809,14/06/1809,47.64419,17.662664,14300,Franco-Italian Victory,,14,6,1809,,,
+Battle of Wagram,,05/07/1809,06/07/1809,48.299444,16.564444,73930,French Victory,,5,7,1809,6,7,1809
+Siege of Girona,,06/05/1809,12/12/1809,41.99361,2.83167,20200,French Victory,,6,5,1809,12,12,1809
+Siege of Cadiz,,05/02/1810,24/08/1812,36.531667,-6.301944,10102,Coalition Victory,,5,2,1810,24,8,1812
+Battle of Barrossa,,05/03/1811,05/03/1811,36.3719,-6.1765,5800,Tactical Allied Victory,,5,3,1811,,,
+Siege of Ciudad Rodrigo,,07/01/1812,20/01/1812,40.596944,-6.539167,2496,Coalition Victory,,7,1,1812,20,1,1812
+Battle of Bussaco,,27/09/1810,27/09/1810,40.333333,-8.333333,5800,Anglo-Portuguese Victory,,27,9,1810,,,
+Siege of Tarragona,,05/05/1811,29/06/1811,41.1156,1.2494,22300,French Victory,,5,5,1811,29,6,1811
+Battle of Valencia,,26/12/1811,09/01/1812,39.4703,-0.3767,23400,French Victory,,26,12,1811,9,1,1812
+Battle of Lissa,,13/03/1811,13/03/1811,43.089167,16.171667,890,British Victory,,13,3,1811,,,
+Battle of Fuentes de Oñoro,,03/05/1811,05/05/1811,40.583333,-6.816667,4118,Anglo-Portuguese Victory,,3,5,1811,5,5,1811
+Siege of Badajoz,,16/03/1812,06/04/1812,38.880278,-6.975278,6424,Coalition Victory,,16,3,1812,6,4,1812
+Battle of Salamanca,,22/07/1812,22/07/1812,40.89353,-5.64526,15173,Coalition Victory,,22,7,1812,,,
+Battle of Vitebsk,,26/07/1812,27/07/1812,55.183333,30.166667,6100,French Victory,,26,7,1812,27,7,1812
+Battle of Saltanovka,,23/07/1812,23/07/1812,53.9,30.3333,3748,French Victory,,23,7,1812,,,
+Siege of Riga,,24/07/1812,18/12/1812,56.95,24.1,,Russian Victory,,24,7,1812,18,12,1812
+Battle of Smolensk,,16/08/1812,18/08/1812,54.766667,32.033333,16000,French Victory,,16,8,1812,18,8,1812
+Siege of Burgos,,19/09/1812,21/10/1812,42.35,-3.7,2854,French Victory,,19,9,1812,21,10,1812
+Battle of Borodino,,07/09/1812,07/09/1812,55.516667,35.816667,85000,French Victory,,7,9,1812,,,
+Battle of Maloyaroslavets,,24/10/1812,24/10/1812,55.021667,36.458333,16000,Russian Victory,,24,10,1812,,,
+Battle of Krasny,,15/11/1812,18/11/1812,54.56,31.43,15000,Russian Victory,,15,11,1812,18,11,1812
+Battle of Berezina,,26/11/1812,29/11/1812,54.324722,28.354444,57000,Inconclusive,,26,11,1812,29,11,1812
+Battle of Lutzen,,02/05/1813,02/05/1813,51.2167,12.1833,52000,French Victory,,2,5,1813,,,
+Battle of Bautzen,,20/05/1813,21/05/1813,51.1833,14.4167,45000,French Victory,,20,5,1813,21,5,1813
+Battle of Vitoria,,21/06/1813,21/06/1813,42.85,-2.683333,10050,Allied victory,,21,6,1813,,,
+Battle of Dresden,,26/08/1813,27/08/1813,51.033333,13.733333,24000,French victory,,26,8,1813,27,8,1813
+Battle of Großbeeren,,23/08/1813,23/08/1813,52.35,13.3,4125,Prussian victory,,23,8,1813,,,
+Battle of Dennewitz,,06/09/1813,06/09/1813,51.9667,13,32915,Coalition victory,,6,9,1813,,,
+Battle of Kulm,,29/08/1813,30/08/1813,50.6972,13.9389,36000,Coalition victory,,29,8,1813,30,8,1813
+Battle of Katzbach,,26/08/1813,26/08/1813,51.104722,16.099167,52000,Coalition victory,,26,8,1813,,,
+Battle of Liebertwolkwitz,,16/10/1813,16/10/1813,51.282778,12.463889,,See Battle of Leipzig,,16,10,1813,,,
+Battle of Liepzig,,16/10/1813,19/10/1813,51.333333,12.383333,92000,Coalition victory,,16,10,1813,19,10,1813
+Siege of Hamburg,,24/12/1813,12/05/1814,53.583,9.983,12000,Indecisive,,24,12,1813,12,5,1814
+Battle of Hanau,,30/10/1813,31/10/1813,50.1331,8.9169,20000,French victory,,30,10,1813,31,10,1813
+Battle of the Bidasoa,,07/10/1813,07/10/1813,43.337778,-1.718611,2501,Allied victory,,7,10,1813,,,
+Battle of Nivelle,,10/11/1813,10/11/1813,43.3875,-1.669167,10000,Allied victory,,10,11,1813,,,
+Battle of Arnhem,,30/11/1813,30/11/1813,51.983333,5.916667,2200,Prussian victory,,30,11,1813,,,
+Battle of Brienne,,29/01/1814,29/01/1814,48.2542,4.6825,7500,French victory,,29,1,1814,,,
+Battle of Champaubert,,10/02/1814,10/02/1814,48.880833,3.775833,3000,French victory,,10,2,1814,,,
+Battle of Montmirail,,11/02/1814,11/02/1814,48.8958,3.4807,6100,French victory,,11,2,1814,,,
+Battle of Château-Thierry  ,,12/02/1814,12/02/1814,49.04,3.4,3600,French victory,,12,2,1814,,,
+Battle of Vauchamps,,14/02/1814,14/02/1814,48.8811,3.6164,10000,French victory,,14,2,1814,,,
+Battle of Mormant,,17/02/1814,17/02/1814,48.607778,2.888611,3000,French victory,,17,2,1814,,,
+Battle of Montereau,,18/02/1814,18/02/1814,48.3853,2.9508,9000,French victory,,18,2,1814,,,
+Battle of Orthez,,27/02/1814,27/02/1814,43.483333,-0.766667,6159,Coalition victory,,27,2,1814,,,
+Battle of Craonne,,07/03/1814,07/03/1814,49.440833,3.7875,13000,French victory,,7,3,1814,,,
+Battle of Laon,,09/03/1814,10/03/1814,49.5658,3.6206,10500,Coalition victory,,9,3,1814,10,3,1814
+Battle of Reims,,12/03/1814,13/03/1814,49.2628,4.0347,10500,French victory,,12,3,1814,13,3,1814
+Battle of Arcis-sur-Aube,,20/03/1814,21/03/1814,48.5347,4.1397,8200,Coalition victory,,20,3,1814,21,3,1814
+Battle of Saint-Dizier,,26/03/1814,26/03/1814,48.6383,4.9497,3100,French victory,,26,3,1814,,,
+Battle of Paris,,30/03/1814,31/03/1814,48.8566,2.3518,27300,Coalition victory,,30,3,1814,31,3,1814
+Battle of Toulouse,,10/04/1814,10/04/1814,43.6044,1.4439,8307,Coalition victory,,10,4,1814,,,
+Battle of Quatre Bras,,16/06/1815,16/06/1815,50.571,4.453,10000,Anglo-allied victory,,16,6,1815,,,
+Battle of Ligny,,16/06/1815,16/06/1815,50.52027,4.5814,28000,French victory,,16,6,1815,,,

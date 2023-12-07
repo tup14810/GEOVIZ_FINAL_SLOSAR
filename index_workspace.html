@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display a map on a webpage</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+.legend {
+background-color: #fff;
+border-radius: 3px;
+bottom: 30px;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+padding: 10px;
+position: absolute;
+right: 10px;
+z-index: 1;
+}
+ 
+.legend h4 {
+margin: 0 0 10px;
+}
+ 
+.legend div span {
+border-radius: 50%;
+display: inline-block;
+height: 10px;
+margin-right: 5px;
+width: 10px;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="state-legend" class="legend">
+	<h4>French Territory</h4>
+	<div><span style="background-color: #1a1a74"></span>French Borders 1805</div>
+	<div><span style="background-color: #0909c3"></span>French Territorial Expansion 1806</div>
+	<div><span style="background-color: #84bed2"></span>French Territorial Expansion 1807</div>
+	<div><span style="background-color: #a41313"></span>Territories not conquered by France</div>
+	<div><span style="background-color: #BF20CC"></span>Important Events</div>
+	</div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoianBiczAwMSIsImEiOiJjbG83cXk2YjUwODNxMmlsaG1nN2QzaDM0In0.PhC2PFKHA8r7YrMLQbLZFg';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/jpbs001/clpt2lcwl00tj01qmbkdgb2m2',
+center: [49.73240194197864, 50.883347420319881], // starting position [lng, lat]
+zoom: 3 // starting zoom
+});
+let hoveredPolygonId = null;
+
+map.on('load', () => {
+// Add a geojson point source.
+// Heatmap layers also work with a vector tile source.
+map.addSource('nap_batt_180515', {
+'type': 'geojson',
+'data': 'nap_batt_180515.geojson'
+
+});
+
+map.addSource('1805_countries', {
+'type': 'geojson',
+'data': '1805/cntry1805_eur_nap.geojson'
+
+});
+
+map.addSource('important_places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Napoleon Crowned Emperor of France - 1804</strong><p>Napoleon proclaims himself Emperor.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [2.35157579842975, 48.85343412517926]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Battle of Austerlitz - 1805</strong><p>Napoleon wins his most sweeping victory of the war, where he defeats a larger Austrian force. Austria is forced to accept a harsh peace.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [16.758163634, 49.12333284]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Treaty of Tilsit - 1807</strong><p>Napoleon, after the Battle of Friedland, negotiates a peace with the Russian Tsar. Famously, the two leaders met on a barge in the Niemen River.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [21.877927124596606, 55.079873703566186]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Battle of Borodino - 1812</strong><p>One of the bloodiest victories of the war, Borodino allowed Napoleon and his army to take Moscow, but the victory was costly and Moscow had been burnt to the ground by the retreating Russians.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [35.8184168984047, 55.528547914145136]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+"<strong>Battle of Leipzig - 1813</strong><p>The Coalition defeats Napoleon's spent force here</p>"
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.380588635316823, 51.33813645718868]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Napoleon Abdicates and Signs Treaty of Fontainebleau - 1814</strong><p>After the German campaign, The Coalition takes Paris in 1814, forcing Napoleon to abdicate.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [2.700643114297519, 48.40245794180508]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Napoleon Exiled to Island of Elba</strong><p>Napoleon escapes to island of Elba and escapes being captured by the Coalition</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [10.294940308975617, 42.78947052356996]
+}
+}
+]
+}
+});
+
+map.addLayer({
+'id': '1805_countries_layer',
+'type': 'fill',
+'source': '1805_countries',
+'paint': {
+'fill-color': 'rgba(200, 100, 240, 0.4)',
+'fill-outline-color': 'rgba(200, 100, 240, 1)',
+'fill-opacity': 0
+}
+});
+map.addLayer({
+'id': 'important_places',
+'type': 'circle',
+'source': 'important_places',
+'paint': {
+'circle-color': '#BF20CC',
+'circle-radius': 6,
+'circle-stroke-width': 2,
+'circle-stroke-color': '#ffffff'
+}
+});
+map.addLayer({
+'id': 'nap_batt_180515_',
+'type': 'circle',
+'source': 'nap_batt_180515',
+});
+map.addLayer(
+{
+'id': 'nap_battle-heat',
+'type': 'heatmap',
+'source': 'nap_batt_180515',
+'maxzoom': 9,
+'paint': {
+// Increase the heatmap weight based on frequency and property magnitude
+'heatmap-weight': [
+'interpolate',
+['linear'],
+['get', 'mag'],
+0,
+0,
+6,
+1
+],
+// Increase the heatmap color weight weight by zoom level
+// heatmap-intensity is a multiplier on top of heatmap-weight
+'heatmap-intensity': [
+'interpolate',
+['linear'],
+['zoom'],
+0,
+1,
+9,
+3
+],
+// Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+// Begin color ramp at 0-stop with a 0-transparancy color
+// to create a blur-like effect.
+'heatmap-color': [
+'interpolate',
+['linear'],
+['heatmap-density'],
+0,
+'rgba(33,102,172,0)',
+0.2,
+'rgb(103,169,207)',
+0.4,
+'rgb(209,229,240)',
+0.6,
+'rgb(253,219,199)',
+0.8,
+'rgb(239,138,98)',
+1,
+'rgb(178,24,43)'
+],
+// Adjust the heatmap radius by zoom level
+'heatmap-radius': [
+'interpolate',
+['linear'],
+['zoom'],
+0,
+2,
+9,
+20
+],
+// Transition from heatmap to circle layer by zoom level
+'heatmap-opacity': [
+'interpolate',
+['linear'],
+['zoom'],
+7,
+1,
+9,
+0
+]
+}
+}
+);
+
+
+});
+ 
+// Add a layer showing the state polygons.
+
+ 
+// When a click event occurs on a feature in the states layer,
+// open a popup at the location of the click, with description
+// HTML from the click event's properties.
+ 
+// Change the cursor to a pointer when
+// the mouse is over the states layer.
+map.on('mouseenter', '1805_countries_layer', () => {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('click', '1805_countries_layer', (e) => {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML(e.features[0].properties.NAME)
+.addTo(map);
+});
+map.on('load', () => {
+// The feature-state dependent fill-opacity expression will render the hover effect
+// when a feature's hover state is set to true.
+map.addLayer({
+'id': 'state-fills',
+'type': 'fill',
+'source': '1805_countries',
+'layout': {},
+'paint': {
+'fill-color': '#627BC1',
+'fill-opacity': [
+'case',
+['boolean', ['feature-state', 'hover'], false],
+1,
+0
+]
+}
+});
+ 
+map.addLayer({
+'id': 'state-borders',
+'type': 'line',
+'source': '1805_countries',
+'layout': {},
+'paint': {
+'line-color': '#000000',
+'line-width': 1
+}
+});
+ 
+// When the user moves their mouse over the state-fill layer, we'll update the
+// feature state for the feature under the mouse.
+map.on('mousemove', 'state-fills', (e) => {
+if (e.features.length > 0) {
+if (hoveredPolygonId !== null) {
+map.setFeatureState(
+{ source: '1805_countries', id: hoveredPolygonId },
+{ hover: false }
+);
+}
+hoveredPolygonId = e.features[0].id;
+map.setFeatureState(
+{ source: '1805_countries', id: hoveredPolygonId },
+{ hover: true }
+);
+}
+});
+ 
+// When the mouse leaves the state-fill layer, update the feature state of the
+// previously hovered feature.
+map.on('mouseleave', 'state-fills', () => {
+if (hoveredPolygonId !== null) {
+map.setFeatureState(
+{ source: '1805_countries', id: hoveredPolygonId },
+{ hover: false }
+);
+}
+hoveredPolygonId = null;
+});
+// Create a popup, but don't add it to the map yet.
+const popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'important_places', (e) => {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+// Copy coordinates array.
+const coordinates = e.features[0].geometry.coordinates.slice();
+const description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'important_places', () => {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+map.on('load', () => {
+// Add a source for the state polygons.
+
+});
+});
+ 
+
+
+</script>
+ 
+</body>
+</html>
